@@ -4,7 +4,6 @@ import 'package:gensou/cubits/anime_tile_language_cubit.dart';
 
 import '/config/routes/routes.dart';
 import '/config/theme/app_theme.dart';
-import 'cubits/theme_cubit.dart';
 import '/screens/home_screen.dart';
 
 void main() {
@@ -12,9 +11,6 @@ void main() {
   runApp(
     MultiBlocProvider(
       providers: [
-        BlocProvider(
-          create: (context) => ThemeCubit(),
-        ),
         BlocProvider(
           create: (context) => AnimeTitleLanguageCubit(),
         ),
@@ -26,24 +22,17 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({
-    super.key,
-  });
+    Key? key, // Add Key parameter here
+  }) : super(key: key); // Pass key parameter to super constructor
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<ThemeCubit, ThemeMode>(
-      builder: (context, state) {
-        final themeMode = state;
-        return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          title: 'Gensou',
-          themeMode: themeMode,
-          theme: AppTheme.lightTheme,
-          darkTheme: AppTheme.darkTheme,
-          home: const HomeScreen(),
-          onGenerateRoute: onGenerateRoute,
-        );
-      },
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Demo',
+      theme: AppTheme.darkTheme,
+      home: const HomeScreen(),
+      onGenerateRoute: onGenerateRoute,
     );
   }
 }

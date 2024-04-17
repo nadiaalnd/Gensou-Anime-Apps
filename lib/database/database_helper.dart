@@ -23,17 +23,6 @@ class DatabaseHelper {
     return _database!;
   }
 
-  // Theme mode setters and getters
-  Future<bool> get isDarkMode async {
-    final db = await instance.database;
-    return db.getBool(Constants.isDarkMode) ?? false;
-  }
-
-  Future<bool> setDarkMode(bool isDark) async {
-    final db = await instance.database;
-    return await db.setBool(Constants.isDarkMode, isDark);
-  }
-
   // Anime title language setters and getters
   Future<bool> get isEnglish async {
     final db = await instance.database;

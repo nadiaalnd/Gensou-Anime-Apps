@@ -29,23 +29,4 @@ class AppTheme {
       ),
     ),
   );
-
-  static final lightTheme = ThemeData(
-    // scaffoldBackgroundColor: lightThemeWhiteBackground,
-    primaryColor: Colors.black,
-    shadowColor: Colors.white54,
-    iconTheme: const IconThemeData(color: Colors.black),
-    primaryIconTheme: const IconThemeData(
-      color: Colors.black,
-    ),
-    textTheme: const TextTheme(
-      bodyLarge: TextStyle(
-        backgroundColor: Colors.white,
-        color: Colors.black,
-      ),
-    ),
-    colorScheme: const ColorScheme.light()
-        // .copyWith(secondary: lightThemeWhiteBackground)
-        .copyWith(background: Colors.white),
-  );
 }
