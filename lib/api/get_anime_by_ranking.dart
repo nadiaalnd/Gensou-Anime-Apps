@@ -11,7 +11,7 @@ Future<Iterable<Anime>> getAnimeByRankingTypeApi({
   required int limit,
 }) async {
   final baseUrl =
-      'https://api.myanimelist.net/v2/anime/ranking?ranking_type=$rankingType&limit=$limit';
+      'https://gensou.planduit.my.id/v2/anime/ranking?ranking_type=$rankingType&limit=$limit';
 
   final response = await http.get(
     Uri.parse(baseUrl),

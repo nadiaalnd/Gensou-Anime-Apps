@@ -10,7 +10,7 @@ Future<String> getCategoryPictureApi({
   required String category,
 }) async {
   final baseUrl =
-      'https://api.myanimelist.net/v2/anime/ranking?ranking_type=$category&limit=1';
+      'https://gensou.planduit.my.id/v2/anime/ranking?ranking_type=$category&limit=1';
 
   final response = await http.get(
     Uri.parse(baseUrl),

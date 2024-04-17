@@ -14,7 +14,7 @@ Future<Iterable<Anime>> getSeasonalAnimesApi({
   final year = DateTime.now().year;
   final season = getCurrentSeason();
   final baseUrl =
-      "https://api.myanimelist.net/v2/anime/season/$year/$season?limit=$limit";
+      "https://gensou.planduit.my.id/v2/anime/season/$year/$season?limit=$limit";
 
   // Make a GET request
   final response = await http.get(

@@ -10,7 +10,7 @@ import '/models/anime_info.dart';
 Future<Iterable<Anime>> getAnimesbySearchApi({
   required String query,
 }) async {
-  final baseUrl = "https://api.myanimelist.net/v2/anime?q=$query&limit=10";
+  final baseUrl = "https://gensou.planduit.my.id/v2/anime?q=$query&limit=10";
 
   final response = await http.get(
     Uri.parse(baseUrl),
