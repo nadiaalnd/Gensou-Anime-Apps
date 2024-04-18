@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gensou/screens/anime_details_screen.dart';
 
 import '/models/anime_node.dart';
 import '/widgets/anime_tile.dart';
@@ -45,13 +44,6 @@ class SimilarAnimesView extends StatelessWidget {
 
               return InkWell(
                 onTap: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (_) => AnimeDetailsScreen(
-                        id: anime.id,
-                      ),
-                    ),
-                  );
                 },
                 child: AnimeTile(
                   anime: anime,

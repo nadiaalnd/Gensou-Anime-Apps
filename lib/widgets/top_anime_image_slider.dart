@@ -4,8 +4,6 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '/constants/app_colors.dart';
 import '/models/anime.dart';
-import '/screens/anime_details_screen.dart';
-
 class TopAnimeImageSlider extends StatefulWidget {
   const TopAnimeImageSlider({
     super.key,
@@ -91,12 +89,6 @@ class TopAnimePicture extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {
-        Navigator.of(context).pushNamed(
-          AnimeDetailsScreen.routeName,
-          arguments: anime.node.id,
-        );
-      },
       splashColor: Colors.white,
       child: ClipRRect(
         borderRadius: BorderRadius.circular(8.0),
