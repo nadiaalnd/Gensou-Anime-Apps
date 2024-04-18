@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:gensou/api/get_seasonal_anime';
-import 'package:gensou/screens/anime_details_screen.dart';
 import 'package:gensou/widgets/anime_tile.dart';
 
 class SeasonalAnimeView extends StatelessWidget {
@@ -54,12 +53,6 @@ class SeasonalAnimeView extends StatelessWidget {
                   itemBuilder: (context, index) {
                     final anime = animes.elementAt(index);
                     return InkWell(
-                      onTap: () {
-                        Navigator.of(context).pushNamed(
-                          AnimeDetailsScreen.routeName,
-                          arguments: anime.node.id,
-                        );
-                      },
                       child: AnimeTile(
                         anime: anime.node,
                       ),

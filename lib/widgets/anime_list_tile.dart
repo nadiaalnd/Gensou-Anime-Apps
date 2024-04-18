@@ -1,7 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
-import '/screens/anime_details_screen.dart';
 import '/models/anime.dart';
 
 class AnimeListTile extends StatelessWidget {
@@ -17,12 +16,6 @@ class AnimeListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {
-        Navigator.of(context).pushNamed(
-          AnimeDetailsScreen.routeName,
-          arguments: anime.node.id,
-        );
-      },
       child: Padding(
         padding: const EdgeInsets.only(
           bottom: 16.0,

@@ -37,3 +37,4 @@ Future<Iterable<Anime>> getSeasonalAnimesApi({
     throw Exception("Failed to get data!");
   }
 }
+
